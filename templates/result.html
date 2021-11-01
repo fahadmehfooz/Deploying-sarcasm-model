@@ -6,9 +6,12 @@
 <style>
 body {
   background-image: url({{ url_for('static', filename='cbing.png') }});
-   background-size: cover;
+   background-size: cover;}
 
-}
+h1 {text-align: center;}
+
+p{text-align: center;}
+
 </style>
 </head>
 <body>
@@ -18,7 +21,11 @@ body {
 		<div id="brandname">
 			
 		</div>
-		<h1 >Result: </h1>
+		<h1 style ="text-align: center;" >Result: </h1>
+<br>
+<br>
+<br>
+<br>
 		
 	</div>
 	</header>
@@ -28,9 +35,9 @@ body {
 
 		
 	{% if prediction == 1%}
-	<h2>Oops, the statement is sarcastic!</h2>
+	<h2 style ="text-align: center;">Oops, that was sarcastic!</h2>
 	{% elif prediction == 0%}
-	<h2 style="color:blue;">Hurray, that was not sarcastic!</h2>
+	<h2 style ="text-align: center;">Woah, that wasn't sarcastic!</h2>
 	{% endif %}
 
 	</div>
